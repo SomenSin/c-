@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+class employe
+{
+public :
+ int id,salery;
+ employe()
+ {id=0;
+ salery=25000;
+ }
+ employe(int a)
+ {
+ id=a;
+ salery=2500;
+ }
+
+};
+
+class prog : public employe 
+{
+public :
+int langcode;
+prog(){
+langcode=10;
+}
+prog(int a){
+id=a;
+langcode=10;
+}
+void display()
+{
+cout<<id<<endl<<salery<<endl<<langcode;
+}
+};
+
+
+int main(){
+employe tom(20),jerry(5);
+cout<<tom.salery<<endl;
+cout<<jerry.salery<<endl;
+
+prog p(5);
+cout<<p.salery<<endl<<p.langcode<<endl;
+p.display();
+
+return 0;
+}
+
