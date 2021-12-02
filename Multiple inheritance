@@ -1,0 +1,71 @@
+#include<iostream>
+using namespace std;
+class base1
+{int a,b;
+public :
+int geta()
+{
+return a;
+}
+int getb()
+{
+return b;
+}
+void seta(int x)
+{
+a=x;
+}
+void setb(int x)
+{
+b=x;
+}
+};
+
+class base2
+{
+int c;
+public :
+int getc()
+{
+return c;
+}
+void setc(int x)
+{
+c=x;
+}
+
+};
+
+class derive : public base1 , public base2
+{
+public :
+void scan()
+{int p,q,r;
+cout<<"Enter a,b and c";
+cin>>p>>q>>r;
+seta(p);
+setb(q);
+setc(r);
+}
+void display()
+{
+cout<<geta()<<endl<<getb()<<endl<<getc()<<endl;
+}
+};
+
+
+int main()
+{
+derive ob1;
+ob1.scan();
+ob1.display();
+return 0;
+
+}
+
+
+
+
+
+
+
