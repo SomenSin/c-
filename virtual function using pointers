@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+class A 
+{ 
+ private:
+  int data;
+ public: 
+ virtual void fun()
+  {
+    cout<<"base class fun "<<endl;
+  }
+	virtual void file(int x)
+	{
+	
+	}
+  void dat(int v)
+  {
+   data=v;
+   cout<<"Data of base class is : "<<data<<endl;
+  }
+};
+class B:public A
+{
+ private:
+  int x;
+ public:
+ void file(int x)
+  {
+  cout<<"File of Derived class is : "<<x<<endl;
+  }
+void fun()
+  {
+    cout<<"Derived class fun"<<endl;
+  }
+};
+int main()
+{
+ A *ptr;
+ A a;
+ B b;
+ ptr=&b;
+ ptr->fun();
+  ptr->file(12);
+ ptr=&a;
+ ptr->fun();
+ ptr->dat(20); 
+}
+
+ 
+
